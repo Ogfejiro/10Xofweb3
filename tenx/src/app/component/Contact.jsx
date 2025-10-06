@@ -34,6 +34,7 @@ const Contact = () => {
 
   return (
     <section
+    id="contact"
       className="w-[90%] max-w-5xl mx-auto py-24 flex flex-col items-center text-center text-white"
       data-aos="fade-up"
     >

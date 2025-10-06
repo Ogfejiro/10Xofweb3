@@ -69,7 +69,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="w-[90%] max-w-6xl mx-auto py-20 text-center text-white">
+    <section id="project" className="w-[90%] max-w-6xl mx-auto py-20 text-center text-white">
       <h2
         className="text-3xl md:text-4xl font-bold mb-12"
         data-aos="fade-down"

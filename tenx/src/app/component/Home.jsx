@@ -17,6 +17,7 @@ const Home = () => {
 
   return (
     <section
+    
       className="w-[90%] max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 py-20"
       data-aos="fade-up" // section fade-up when it enters viewport
     >
