@@ -49,6 +49,8 @@ const Nav = () => {
 
           <a
             href="https://x.com/10Xofweb3"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-4 py-2 rounded-lg bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition"
             data-aos="zoom-in"
             data-aos-delay="600"
