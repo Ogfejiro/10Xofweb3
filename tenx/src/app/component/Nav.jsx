@@ -48,13 +48,12 @@ const Nav = () => {
           </ul>
 
           <a
-  href="https://x.com/10Xofweb3"
+ href="https://x.com/Ten_ex"
   target="_blank"
   rel="noopener noreferrer"
-  className="relative z-50 inline-block px-5 py-2 rounded-lg bg-yellow-500 text-black font-semibold hover:bg-yellow-400 hover:scale-105 transition-transform duration-300 shadow-md active:scale-95"
+  className="cursor-pointer relative z-[9999] inline-block px-5 py-2 rounded-lg bg-yellow-500 text-black font-semibold hover:bg-yellow-400 hover:scale-105 transition-transform duration-300 shadow-md active:scale-95"
   data-aos="zoom-in"
   data-aos-delay="600"
-  data-aos-once="true"
 >
 
   Contact
