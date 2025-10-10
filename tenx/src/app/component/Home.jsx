@@ -16,9 +16,9 @@ const Home = () => {
   }, []);
 
   return (
-    <section
+    <section 
     
-      className="w-[90%] max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 py-20"
+      className=" w-[90%] max-w-4xl mx-auto px-8 mx-auto flex flex-col md:flex-row items-center justify-between gap-10 py-20"
       data-aos="fade-up" // section fade-up when it enters viewport
     >
       {/* Left Section */}
