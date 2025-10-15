@@ -24,7 +24,7 @@ const Nav = () => {
     <>
       {/* Desktop Nav */}
       <nav
-        className="hidden md:block w-[90%] max-w-4xl mx-auto px-8 py-4 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/30 shadow-lg z-50 mt-4"
+        className="hidden md:block w-[90%] max-w-6xl mx-auto px-8 py-4 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/30 shadow-lg z-50 mt-4"
         data-aos="fade-down"
       >
         <div className="flex justify-between items-center">
@@ -42,7 +42,6 @@ const Nav = () => {
             data-aos-delay="400"
           >
             <li><a href="#home" className="hover:text-yellow-400 transition">Home</a></li>
-            <li><a href="#about" className="hover:text-yellow-400 transition">About</a></li>
             <li><a href="#services" className="hover:text-yellow-400 transition">Services</a></li>
             <li><a href="#project" className="hover:text-yellow-400 transition">Project</a></li>
           </ul>
@@ -70,7 +69,7 @@ const Nav = () => {
         data-aos-delay="200"
       >
         <a href="#home" className="hover:text-yellow-400 transition"><Home className="w-6 h-6" /></a>
-        <a href="#about" className="hover:text-yellow-400 transition"><Info className="w-6 h-6" /></a>
+        <a href="#/" className="hover:text-yellow-400 transition"><Info className="w-6 h-6" /></a>
         <a href="#services" className="hover:text-yellow-400 transition"><Briefcase className="w-6 h-6" /></a>
         <a href="#project" className="hover:text-yellow-400 transition"><PenTool className="w-6 h-6" /></a>
         <a href="#contact" className="hover:text-yellow-400 transition"><Mail className="w-6 h-6" /></a>

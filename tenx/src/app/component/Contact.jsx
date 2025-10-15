@@ -1,4 +1,4 @@
-"use client"; // important for Next.js client-side animation
+"use client"; // Required for Next.js client-side animation
 
 import React, { useEffect } from "react";
 import AOS from "aos";
@@ -7,7 +7,7 @@ import { Twitter, Send, MessageCircle, Flame, Bomb } from "lucide-react";
 
 const Contact = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true }); // initialize AOS
+    AOS.init({ duration: 800, easing: "ease-in-out", once: true });
   }, []);
 
   const socials = [
@@ -34,20 +34,22 @@ const Contact = () => {
 
   return (
     <section
-    id="contact"
-      className=" w-[90%] max-w-4xl mx-auto px-8 flex flex-col items-center text-center text-white"
+      id="contact"
+      className="w-[90%] max-w-4xl mx-auto px-4 md:px-8 py-12 flex flex-col items-center text-center text-white"
       data-aos="fade-up"
     >
+      {/* Heading */}
       <h1
-        className="text-4xl md:text-5xl font-bold mb-4"
+        className="text-3xl md:text-5xl font-bold mb-4"
         data-aos="zoom-in"
         data-aos-delay="200"
       >
         Ready to <span className="text-yellow-400">Go Viral?</span>
       </h1>
 
+      {/* Subheading */}
       <p
-        className="text-gray-300 max-w-2xl mb-4 text-sm md:text-base flex items-center justify-center gap-2"
+        className="text-gray-300 max-w-xl mb-4 text-sm md:text-base flex flex-col md:flex-row items-center justify-center gap-2"
         data-aos="fade-up"
         data-aos-delay="400"
       >
@@ -59,15 +61,16 @@ const Contact = () => {
       </p>
 
       <p
-        className="text-gray-400 max-w-2xl mb-8 text-sm md:text-base"
+        className="text-gray-400 max-w-xl mb-8 text-sm md:text-base"
         data-aos="fade-up"
         data-aos-delay="600"
       >
         Get instant community buzz and rapid visibility with expert token and banner promotions.
       </p>
 
+      {/* Call to action */}
       <button
-        className="bg-yellow-400 text-black font-medium px-8 py-3 rounded-lg hover:bg-yellow-300 transition-transform hover:scale-105 flex items-center gap-2"
+        className="bg-yellow-400 text-black font-medium px-8 py-3 rounded-lg hover:bg-yellow-300 transition-transform hover:scale-105 flex items-center gap-2 mb-8"
         data-aos="zoom-in"
         data-aos-delay="800"
       >
@@ -75,27 +78,26 @@ const Contact = () => {
       </button>
 
       {/* Social Links */}
-      <div className="mt-12 space-y-4 w-full max-w-md">
+      <div className="mt-8 w-full max-w-md flex flex-col gap-4">
         {socials.map((social, i) => (
           <a
             key={i}
             href={social.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl p-4 transition"
+            className="flex flex-col md:flex-row items-center justify-between bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl p-4 transition"
             data-aos="fade-up"
-            data-aos-delay={1000 + i * 200} // staggered animation for each link
+            data-aos-delay={1000 + i * 200}
           >
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 w-full md:w-auto">
               <span className="text-yellow-400">{social.icon}</span>
               <div className="text-left">
                 <p className="font-medium">{social.name}</p>
                 <p className="text-gray-400 text-sm">{social.username}</p>
               </div>
             </div>
-
             {social.note && (
-              <span className="text-xs text-yellow-400 font-medium">
+              <span className="text-xs text-yellow-400 font-medium mt-2 md:mt-0">
                 {social.note}
               </span>
             )}

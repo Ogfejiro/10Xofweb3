@@ -1,5 +1,4 @@
-"use client"; // Required for Next.js client components that use useEffect
-
+"use client";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -9,22 +8,22 @@ import Link from "next/link";
 const Home = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // how long each animation lasts (in ms)
-      once: true,     // ensures animations only run once
-      easing: "ease-in-out", // smooth easing for a premium feel
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out",
     });
   }, []);
 
   return (
     <section 
-    
-      className=" w-[90%] max-w-4xl mx-auto px-8 mx-auto flex flex-col md:flex-row items-center justify-between gap-10 py-20"
-      data-aos="fade-up" // section fade-up when it enters viewport
+    id="home"
+      className="w-[90%] max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10 py-20"
+      data-aos="fade-up"
     >
       {/* Left Section */}
       <div
         className="flex-1 space-y-6 text-center md:text-left"
-        data-aos="fade-right" // slides in from left on larger screens
+        data-aos="fade-right"
         data-aos-delay="200"
       >
         <h1
@@ -32,7 +31,8 @@ const Home = () => {
           data-aos="zoom-in"
           data-aos-delay="400"
         >
-          Welcome to <span className="text-yellow-400">My Portfolio</span>
+          Web3 Moves Fast. <br />
+          <span className="text-yellow-400">I Make Sure You’re The One They’re Chasing.</span>
         </h1>
 
         <p
@@ -40,9 +40,8 @@ const Home = () => {
           data-aos="fade-up"
           data-aos-delay="600"
         >
-          Hi! I'm 10XOFWEB3, a Marketer and Crypto Expert with 5 years of experience. 
-          I specialize in moving brands, projects, and products from obscurity to visibility — 
-          helping them grow, gain trust, and achieve lasting impact in the Web3 space with optimal results.
+          I craft marketing systems that amplify projects, spark hype, and build real traction — 
+          not just followers. Strategy, storytelling, and scale for the new digital frontier.
         </p>
 
         <Link
@@ -53,18 +52,18 @@ const Home = () => {
           data-aos="zoom-in"
           data-aos-delay="800"
         >
-          Get to know me
+          Level Up Your Brand 🚀
         </Link>
       </div>
 
       {/* Right Section - Image */}
       <div
         className="flex-1 flex justify-center md:justify-end"
-        data-aos="fade-left" // opposite direction for visual balance
+        data-aos="fade-left"
         data-aos-delay="400"
       >
         <Image
-          src="/nft.jpg" // ✅ Ensure this image exists in /public
+          src="/nft.jpg"
           alt="NFT"
           width={400}
           height={400}
