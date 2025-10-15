@@ -45,7 +45,7 @@ const Home = () => {
         </p>
 
         <Link
-          href="https://twitter.com/yourusername"
+          href="https://x.com/10Xofweb3"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-6 py-3 rounded-lg bg-yellow-400 text-black font-semibold hover:bg-yellow-300 transition"

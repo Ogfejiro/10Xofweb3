@@ -81,7 +81,10 @@ const Projects = () => {
 
   return (
     <section id="project" className="w-[90%] max-w-4xl mx-auto py-16 text-white">
-      <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center" data-aos="fade-down">
+      <h2
+        className="text-4xl md:text-5xl font-bold mb-12 text-center"
+        data-aos="fade-down"
+      >
         My <span className="text-yellow-400">Projects</span>
       </h2>
 
@@ -91,25 +94,41 @@ const Projects = () => {
         return (
           <div
             key={index}
-            className={`flex flex-col md:flex-row ${isEven ? "" : "md:flex-row-reverse"} items-center gap-8 mb-16`}
+            className={`flex flex-col md:flex-row ${
+              isEven ? "" : "md:flex-row-reverse"
+            } items-center gap-8 mb-16`}
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
-            {/* Images */}
-            <div className="flex-1 flex flex-col md:flex-row justify-center md:justify-start gap-4">
+            {/* Image Section - FIX APPLIED HERE */}
+            <div className="flex-1 flex flex-col md:flex-row justify-center md:justify-start gap-4 w-full"> 
+            {/* Added w-full to the container to ensure it takes up space */}
               {project.images.map((img, i) => (
                 <div
                   key={i}
-                  className="relative w-full md:w-72 h-64 md:h-72 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                  // Adjusted mobile width (w-full to w-80 or a specific size) 
+                  // and explicitly set aspect ratio for better mobile behavior 
+                  // w-full and h-64 are good starting points for mobile
+                  className="relative w-full h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-lg shadow-lg transition-transform duration-300 hover:scale-105"
                 >
-                  <Image src={img} alt={`${project.title} image ${i + 1}`} fill className="object-cover" />
+                  <Image
+                    src={img}
+                    alt={`${project.title} image ${i + 1}`}
+                    fill
+                    className="object-cover"
+                    // Improved sizes prop for mobile and desktop
+                    sizes="(max-width: 768px) 90vw, 300px" 
+                    priority
+                  />
                 </div>
               ))}
             </div>
 
             {/* Text */}
             <div className="flex-1 space-y-4 text-center md:text-left mt-6 md:mt-0">
-              <h3 className="text-3xl font-bold text-yellow-400">{project.title}</h3>
+              <h3 className="text-3xl font-bold text-yellow-400">
+                {project.title}
+              </h3>
               <ul className="space-y-2">
                 {project.description.map((point, i) => (
                   <li
@@ -139,7 +158,10 @@ const Projects = () => {
       })}
 
       {/* Pagination */}
-      <div className="flex justify-center items-center mt-8 gap-6" data-aos="fade-up">
+      <div
+        className="flex justify-center items-center mt-8 gap-6"
+        data-aos="fade-up"
+      >
         <button
           onClick={(e) => {
             e.preventDefault();
@@ -147,7 +169,9 @@ const Projects = () => {
           }}
           disabled={page === 1}
           className={`flex items-center gap-2 px-4 py-2 rounded-lg border border-white/20 transition ${
-            page === 1 ? "opacity-40 cursor-not-allowed" : "hover:bg-white/10 hover:scale-105"
+            page === 1
+              ? "opacity-40 cursor-not-allowed"
+              : "hover:bg-white/10 hover:scale-105"
           }`}
         >
           <ArrowLeft size={18} /> Prev
@@ -164,7 +188,9 @@ const Projects = () => {
           }}
           disabled={page === totalPages}
           className={`flex items-center gap-2 px-4 py-2 rounded-lg border border-white/20 transition ${
-            page === totalPages ? "opacity-40 cursor-not-allowed" : "hover:bg-white/10 hover:scale-105"
+            page === totalPages
+              ? "opacity-40 cursor-not-allowed"
+              : "hover:bg-white/10 hover:scale-105"
           }`}
         >
           Next <ArrowRight size={18} />

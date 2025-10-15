@@ -24,7 +24,7 @@ const Nav = () => {
     <>
       {/* Desktop Nav */}
       <nav
-        className="hidden md:block w-[90%] max-w-6xl mx-auto px-8 py-4 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/30 shadow-lg z-50 mt-4"
+        className="hidden md:block w-[100%] max-w-6xl mx-auto px-8 py-4 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/30 shadow-lg z-50 mt-4"
         data-aos="fade-down"
       >
         <div className="flex justify-between items-center">
