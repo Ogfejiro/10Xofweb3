@@ -8,7 +8,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const projects = [
- {
+  {
     title: "MEMECOIN",
     description: [
       "Marketed a memecoin from 1.2M market cap to 13M ATH.",
@@ -29,6 +29,7 @@ const projects = [
     images: ["/spacehead.jpg", "/space1.jpg"],
     link: "https://x.com/Mazimonie/status/1969084445136220218?t=_odfMfttRweWFIBxciv3Jw&s=19",
   },
+
   {
     title: "GAMING",
     description: [
@@ -36,7 +37,7 @@ const projects = [
       "Marketed a gaming platform pushing to the top of the leaderboard at 75k numerical traffic generated.",
       "Topped the leaderboard on P2E game which was calculated based on reach with just 5days attention.",
     ],
-    images: ["/video.mp4", "/leaderboard.jpg",],
+    images: ["/video.mp4", "/leaderboard.jpg"],
     link: "https://x.com/Mazimonie/status/1969084445136220218?t=_odfMfttRweWFIBxciv3Jw&s=19",
   },
 
@@ -73,20 +74,15 @@ const projects = [
     link: "https://yourwebsite.com",
   },
 
- {
+  {
     title: "NFT",
     description: [
-      "Successful enough to launch my own NFT collection alognside get it trending plus sold out.",
-      "Also hosted a successful live event pulling in holders from diffrenet geographical locations.",
-      
+      "Successful enough to launch my own NFT collection alongside get it trending plus sold out.",
+      "Also hosted a successful live event pulling in holders from different geographical locations.",
     ],
     images: ["/theboyz.jpg", "/theboyz2.jpg"],
     link: "https://yourwebsite.com",
   },
-  
-  
-  
-  
 ];
 
 const Projects = () => {
@@ -129,31 +125,38 @@ const Projects = () => {
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
-            {/* Image Section - FIX APPLIED HERE */}
-            <div className="flex-1 flex flex-col md:flex-row justify-center md:justify-start gap-4 w-full"> 
-            {/* Added w-full to the container to ensure it takes up space */}
-              {project.images.map((img, i) => (
+            {/* Media Section (Video + Image logic) */}
+            <div className="flex-1 flex flex-col md:flex-row justify-center md:justify-start gap-4 w-full">
+              {project.images.map((media, i) => (
                 <div
                   key={i}
-                  // Adjusted mobile width (w-full to w-80 or a specific size) 
-                  // and explicitly set aspect ratio for better mobile behavior 
-                  // w-full and h-64 are good starting points for mobile
                   className="relative w-full h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-lg shadow-lg transition-transform duration-300 hover:scale-105"
                 >
-                  <Image
-                    src={img}
-                    alt={`${project.title} image ${i + 1}`}
-                    fill
-                    className="object-cover"
-                    // Improved sizes prop for mobile and desktop
-                    sizes="(max-width: 768px) 90vw, 300px" 
-                    priority
-                  />
+                  {media.endsWith(".mp4") ? (
+                    <video
+                      src={media}
+                      controls
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="object-cover w-full h-full"
+                    />
+                  ) : (
+                    <Image
+                      src={media}
+                      alt={`${project.title} image ${i + 1}`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 90vw, 300px"
+                      priority
+                    />
+                  )}
                 </div>
               ))}
             </div>
 
-            {/* Text */}
+            {/* Text Section */}
             <div className="flex-1 space-y-4 text-center md:text-left mt-6 md:mt-0">
               <h3 className="text-3xl font-bold text-yellow-400">
                 {project.title}
