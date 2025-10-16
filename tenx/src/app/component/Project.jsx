@@ -8,18 +8,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const projects = [
-  {
-    title: "Nexus",
-    description: [
-      "Onboarded 811 active users in one month using referral incentives.",
-      "Generated 12,165 total points in a crypto escrow network.",
-      "Drove measurable engagement and visibility among top KOLs on CT.",
-    ],
-    images: ["/Nexscorereal.jpg"],
-    link: "https://x.com/nexus_mls",
-  },
-  {
-    title: "AMA WITH $NEZHA",
+ {
+    title: "MEMECOIN",
     description: [
       "Marketed a memecoin from 1.2M market cap to 13M ATH.",
       "Built massive hype through strategic AMAs and influencer outreach.",
@@ -28,16 +18,7 @@ const projects = [
     images: ["/ama.jpg", "/amahost.jpg"],
     link: "https://dexscreener.com/solana/EwZHZ6tHqLjsbDfkrTdHCTcPdq2MCiFRvXsHFtGGpump",
   },
-  {
-    title: "Sui Bison App",
-    description: [
-      "Referral-driven staking growth campaign built from scratch.",
-      "Onboarded 3,216 users with a simple 1 SUI deposit per referral.",
-      "Generated over 2,500 SUI in total team volume.",
-    ],
-    images: ["/sui.jpg"],
-    link: "https://yourwebsite.com",
-  },
+
   {
     title: "SPACES",
     description: [
@@ -49,6 +30,17 @@ const projects = [
     link: "https://x.com/Mazimonie/status/1969084445136220218?t=_odfMfttRweWFIBxciv3Jw&s=19",
   },
   {
+    title: "GAMING",
+    description: [
+      "Marketed a gaming platform that got the owner impressed he had to drop a review on a public space.",
+      "Marketed a gaming platform pushing to the top of the leaderboard at 75k numerical traffic generated.",
+      "Topped the leaderboard on P2E game which was calculated based on reach with just 5days attention.",
+    ],
+    images: ["/video.mp4", "/leaderboard.jpg",],
+    link: "https://x.com/Mazimonie/status/1969084445136220218?t=_odfMfttRweWFIBxciv3Jw&s=19",
+  },
+
+  {
     title: "RWAs Crypto-Based Fintech",
     description: [
       "Marketed Duffle — a crypto-to-fiat app driving real adoption.",
@@ -58,6 +50,43 @@ const projects = [
     images: ["/Dufflereal.jpg"],
     link: "https://app.duffle.io",
   },
+
+  {
+    title: "BLOCKCHAIN",
+    description: [
+      "Onboarded 811 active users in one month using referral incentives.",
+      "Generated 12,165 total points in a crypto escrow network.",
+      "Drove measurable engagement and visibility among top KOLs on CT.",
+    ],
+    images: ["/Nexscorereal.jpg"],
+    link: "https://x.com/nexus_mls",
+  },
+
+  {
+    title: "Sui Bison App",
+    description: [
+      "Referral-driven staking growth campaign built from scratch.",
+      "Onboarded 3,216 users with a simple 1 SUI deposit per referral.",
+      "Generated over 2,500 SUI in total team volume.",
+    ],
+    images: ["/suibison.jpg", "/suibison2.jpg"],
+    link: "https://yourwebsite.com",
+  },
+
+ {
+    title: "NFT",
+    description: [
+      "Successful enough to launch my own NFT collection alognside get it trending plus sold out.",
+      "Also hosted a successful live event pulling in holders from diffrenet geographical locations.",
+      
+    ],
+    images: ["/theboyz.jpg", "/theboyz2.jpg"],
+    link: "https://yourwebsite.com",
+  },
+  
+  
+  
+  
 ];
 
 const Projects = () => {
