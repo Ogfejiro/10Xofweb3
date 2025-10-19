@@ -35,7 +35,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-[90%] max-w-4xl mx-auto px-4 md:px-8 py-12 flex flex-col items-center text-center text-white"
+      className="w-[90%] max-w-4xl mx-auto px-4 md:px-8 py-12 pb-24 md:pb-12 flex flex-col items-center text-center text-white"
       data-aos="fade-up"
     >
       {/* Heading */}
@@ -49,12 +49,15 @@ const Contact = () => {
 
       {/* Subheading */}
       <p
-        className="text-gray-300 max-w-xl mb-4 text-sm md:text-base flex flex-col md:flex-row items-center justify-center gap-2"
+        className="text-gray-300 max-w-xl mb-4 text-sm md:text-base flex flex-wrap items-center justify-center gap-2"
         data-aos="fade-up"
         data-aos-delay="400"
       >
         You handle the{" "}
-        <span className="text-yellow-400 font-semibold">tech</span>, I’ll handle the{" "}
+        <span className="text-yellow-400 font-semibold whitespace-nowrap">
+          tech,&nbsp;
+        </span>
+        I’ll handle the{" "}
         <span className="text-yellow-400 font-semibold flex items-center gap-1">
           explosion <Bomb size={18} className="inline-block" />
         </span>
@@ -70,7 +73,7 @@ const Contact = () => {
 
       {/* Call to action */}
       <button
-        className="bg-yellow-400 text-black font-medium px-8 py-3 rounded-lg hover:bg-yellow-300 transition-transform hover:scale-105 flex items-center gap-2 mb-8"
+        className="bg-yellow-400 text-black font-medium px-8 py-3 rounded-lg hover:bg-yellow-300 transition-transform hover:scale-105 flex items-center gap-2 mb-8 cursor-pointer"
         data-aos="zoom-in"
         data-aos-delay="800"
       >
@@ -78,7 +81,7 @@ const Contact = () => {
       </button>
 
       {/* Social Links */}
-      <div className="mt-8 w-full max-w-md flex flex-col gap-4">
+      <div className="mt-2 md:mt-8 w-full max-w-md flex flex-col gap-4">
         {socials.map((social, i) => (
           <a
             key={i}
